@@ -40,3 +40,6 @@ No server? Choose "Open with sample data" on the sign-in screen.
 ![pulse-1-overview](docs/pulse-1-overview.jpg)
 ![pulse-2-orders](docs/pulse-2-orders.jpg)
 ![pulse-3-insights](docs/pulse-3-insights.jpg)
+![pulse-4-customers](docs/pulse-4-customers.jpg)
+![pulse-5-order](docs/pulse-5-order.jpg)
+![pulse-6-settings](docs/pulse-6-settings.jpg)
