@@ -13,13 +13,12 @@ class DashboardPage extends StatelessWidget {
     final money = NumberFormat.compactCurrency(symbol: '\$');
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Pulse', style: TextStyle(fontWeight: FontWeight.w700)),
+        title: const Text('Pulse.', style: TextStyle(fontFamily: 'Georgia', fontFamilyFallback: ['Gentium Plus', 'serif'], fontSize: 26)),
         backgroundColor: Colors.transparent,
+        elevation: 0,
       ),
       body: Container(
-        decoration: const BoxDecoration(
-          gradient: RadialGradient(center: Alignment(-1, -1), radius: 1.3, colors: [Color(0xFF0F3D2C), Color(0xFF070B09)]),
-        ),
+        color: const Color(0xFFF3EFE6),
         child: LayoutBuilder(builder: (context, c) {
         final wide = c.maxWidth > 900;
         final kpis = [
@@ -32,7 +31,7 @@ class DashboardPage extends StatelessWidget {
           if (m.insight.isNotEmpty)
             Padding(
               padding: const EdgeInsets.only(top: 16),
-              child: Card(child: ListTile(leading: const Icon(Icons.auto_awesome), title: Text(m.insight))),
+              child: Card(child: ListTile(leading: const Icon(Icons.circle, size: 8, color: Color(0xFFD8472B)), title: Text(m.insight))),
             ),
           Padding(
             padding: const EdgeInsets.only(top: 8),
@@ -88,9 +87,10 @@ class _Chart extends StatelessWidget {
               lineBarsData: [
                 LineChartBarData(
                   isCurved: true,
-                  barWidth: 3,
+                  barWidth: 2,
+                  color: const Color(0xFF14130F),
                   dotData: const FlDotData(show: false),
-                  belowBarData: BarAreaData(show: true, color: Colors.green.withOpacity(.15)),
+                  belowBarData: BarAreaData(show: false),
                   spots: [for (var i = 0; i < values.length; i++) FlSpot(i.toDouble(), values[i])],
                 ),
               ],

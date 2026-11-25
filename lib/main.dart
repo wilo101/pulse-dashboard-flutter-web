@@ -18,19 +18,26 @@ class PulseApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           useMaterial3: true,
-          brightness: Brightness.dark,
-          colorSchemeSeed: const Color(0xFF3DDC97),
-          scaffoldBackgroundColor: const Color(0xFF070B09),
-          cardTheme: CardTheme(
-            color: Colors.white.withOpacity(.05),
+          brightness: Brightness.light,
+          colorScheme: const ColorScheme.light(
+            primary: Color(0xFF14130F),
+            secondary: Color(0xFFD8472B),
+            surface: Color(0xFFF3EFE6),
+            onSurface: Color(0xFF14130F),
+          ),
+          scaffoldBackgroundColor: const Color(0xFFF3EFE6),
+          dividerColor: const Color(0x2214130F),
+          cardTheme: const CardTheme(
+            color: Colors.transparent,
             elevation: 0,
+            margin: EdgeInsets.zero,
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(22),
-              side: BorderSide(color: Colors.white.withOpacity(.09)),
+              borderRadius: BorderRadius.zero,
+              side: BorderSide(color: Color(0x2214130F)),
             ),
           ),
-          textTheme: ThemeData.dark().textTheme.copyWith(
-                headlineMedium: const TextStyle(fontSize: 44, fontWeight: FontWeight.w200, letterSpacing: -1.5),
+          textTheme: ThemeData.light().textTheme.copyWith(
+                headlineMedium: const TextStyle(fontFamily: 'Georgia', fontFamilyFallback: ['Gentium Plus', 'serif'], fontSize: 48, fontWeight: FontWeight.w400, letterSpacing: -1),
               ),
         ),
         home: const DashboardPage(),
