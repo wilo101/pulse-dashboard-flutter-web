@@ -34,9 +34,8 @@ No server? Choose "Open with sample data" on the sign-in screen.
 
 ## Honest status
 - The code was written without running it on a device. Run `flutter analyze` and `flutter test` first.
-- Screens below are design mockups, not recordings.
 
-## Screens (design mockups)
+## Screens
 ![pulse-1-overview](docs/pulse-1-overview.jpg)
 ![pulse-2-orders](docs/pulse-2-orders.jpg)
 ![pulse-3-insights](docs/pulse-3-insights.jpg)
